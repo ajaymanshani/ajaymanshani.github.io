@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <title>PLANT DETECTION</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<!-- CSS -->
+<style>
+  body,
+
+  .hero-image {
+    background-image: url("/static/images/plant.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+</style>
+
+<!-- Main Body -->
+<body>
+
+  <div class="container">
+
+    <div class="hero-image">
+      <br>
+      <h2 class="text-center">Parametric Model for Flora Detection in the Middle Himalayas</h2>
+      <h5 class="text-center">For this application data isn't taken from any online source, it is manually collected
+        from
+        the Forest Research Institute, Dehradun. The trained machine learning model is made available to predict the
+        plant
+        based on input parameters.</h5>
+      <h5 class="text-center">Instruction: fill the form to predict the plant</h5>
+      <form action="result" method="POST">
+        <div class="form-group">
+          <label for="habit_class"><h5>Plant Habit</h5></label>
+          <select id="habit_class" class="form-control" name="habit_class">
+            <option value="1">A-large-tree</option>
+            <option value="2">A-small-thorny-decidious-tree</option>
+            <option value="3">A-moderate-sized-tree</option>
+            <option value="4">A-small-evergreen-tree</option>
+            <option value="5">A-decisious-shrub</option>
+            <option value="6">An-evergreen-and-gracious-shrub</option>
+            <option value="7">A-straggling-aromatic-shrub</option>
+            <option value="8">Unarmed-shrubs</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="height"><h5>Height</h5></label>
+          <select id="height" class="form-control" name="height">
+            <option value="1">0.04-0.07m</option>
+            <option value="3">3m</option>
+            <option value="45">33-66m</option>
+            <option value="23">14-40m</option>
+            <option value="1">1-2m</option>
+            <option value="9">8-12m</option>
+            <option value="5">4-8m</option>
+            <option value="6">4-8m</option>
+            <option value="61">33-98m</option>
+            <option value="5">3-8.2m</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="bark_type"><h5>Bark Type</h5></label>
+          <select id="bark_type" class="form-control" name="bark_type">
+            <option value="1">Smooth</option>
+            <option value="2">Spiny</option>
+            <option value="3">Thin</option>
+            <option value="4">Rough</option>
+            <option value="5">Minutely_Pubsecent</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="leaf_type"><h5>Leaf Type</h5></label>
+          <select id="leaf_type" class="form-control" name="leaf_type">
+            <option value="1">Simple</option>
+            <option value="2">Compound</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="shape"><h5>Leaf Shape</h5></label>
+          <select id="shape" class="form-control" name="shape">
+            <option value="1">Ovate-Oblong</option>
+            <option value="2">Obovate</option>
+            <option value="3">Ovate</option>
+            <option value="4">Orbicular</option>
+            <option value="5">Broad_Ovate</option>
+            <option value="6">Elliptic</option>
+            <option value="7">Orbicular_Ovate</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="infloro"><h5>Inflorosense</h5></label>
+          <select id="infloro" class="form-control" name="infloro">
+            <option value="1">Ray_Flowers</option>
+            <option value="2">Fascicle</option>
+            <option value="3">Large, Graceful</option>
+            <option value="4">Panicles</option>
+            <option value="5">Leafy_with_many_flowers</option>
+            <option value="6">Huge</option>
+            <option value="7">Dense</option>
+          </select>
+        </div>
+        <br>
+        <br>
+        <button type="button, submit" value="Submit" class="btn btn-primary">Submit</button>     
+        <br>
+        <br>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
